@@ -1,4 +1,4 @@
-function [avg_score, best_score, best_pos, ratio,HATABUYUKflag, cands] = huber_tercom3(pred_pos, terrain, P_INS, meas, varargin)
+function [avg_score, best_score, best_pos, ratio,HATABUYUKflag, cands] = calculate_tercom_pos(pred_pos, terrain, P_INS, meas, varargin)
 %TERCOM_MODULE Performs TERrain COntour Matching using Mean Absolute Difference.
 % Inputs:
 %   pred_pos        : [N x 2] predicted [lat, lon] values as degrees

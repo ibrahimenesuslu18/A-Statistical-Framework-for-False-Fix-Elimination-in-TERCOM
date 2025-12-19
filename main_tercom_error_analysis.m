@@ -93,7 +93,7 @@ for k = 1:N-1
     hat_hot_struct          = terrain.hatHot(lla_truth(k + 1, 1), lla_truth(k + 1, 2), lla_truth(k + 1, 3), 1); % request terrain server
     radalt_meas(k)          = hat_hot_struct.heightAboveTerrain; % Pull the height above terrain response
     if mod(k, 40) == 0
-        calculate_tercom_pos(selam, terrain, sigma_INS, radalt_meas);
+        calculate_tercom_pos(pred_pos_INS, terrain, sigma_INS, radalt_meas);
     end
     
     w_IMU_drift(:, k + 1)   =  w_IMU_drift(:, k) + dt * w_IMU_drift_noise(:, k); % Integrate the IMU drift noise component
